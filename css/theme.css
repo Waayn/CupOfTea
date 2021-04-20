@@ -903,6 +903,11 @@ h5 {
     color:white;
     border:none;
     border-radius:0.7rem;
+    cursor:pointer;
+}
+
+#delete-cart:hover {
+    background-color:#96B01190;
 }
 
 #div-delete {
@@ -910,3 +915,56 @@ h5 {
     justify-content: center;
 }
 
+#order-btn {
+    text-decoration: none;
+    font-size:1.8rem;
+    padding:1rem 4rem 1rem 4rem;
+    margin-bottom:4rem;
+    background-color:#96B011;
+    color:white;
+    border:none;
+    border-radius:0.7rem;
+    cursor:pointer;
+}
+
+#order-btn:hover {
+    background-color:#96B01190;
+}
+
+#div-order {
+    display:flex;
+    justify-content: center;
+}
+
+#div-register {
+    margin-left:3rem;
+    margin-bottom:3rem;
+}
+
+#empty-cart {
+    margin-left:3rem;
+    margin-bottom:3rem;
+}
+
+#order-confirm {
+    text-decoration: none;
+    font-size:1.8rem;
+    padding:1rem 4rem 1rem 4rem;
+    margin-bottom:4rem;
+    background-color:#96B011;
+    color:white;
+    border:none;
+    border-radius:0.7rem;
+    cursor:pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#order-confirm:hover {
+    background-color:#96B01190;
+}
+
+#center-btn {
+    display:flex;
+    justify-content:center;
+}

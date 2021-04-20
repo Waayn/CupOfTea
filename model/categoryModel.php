@@ -1,6 +1,9 @@
 <?php
 
-require_once "core/connect.php";
+namespace App\model;
+
+use App\core\connect as Connect;
+
 
 class CategoryModel extends Connect {
 
@@ -11,6 +14,6 @@ class CategoryModel extends Connect {
 		$query->execute();
 
 		// je retourne directement le resultat de la requete 
-		return  $query->fetchALL(PDO::FETCH_ASSOC);
+		return  $query->fetchALL(\PDO::FETCH_ASSOC);
 	}
 }

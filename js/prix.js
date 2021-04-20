@@ -2,6 +2,7 @@ let priceCart = document.getElementById('prix-panier')
 let totalCart = 0
 let calcul
 let keys = Object.keys(sessionStorage);
+let finalPriceDiv = document.getElementById('final-price')
 
 if (keys.length != 0){
 	for(let i=0; i < keys.length; i++) {
@@ -15,3 +16,5 @@ totalCart = Math.round(totalCart)/100
 totalCart = parseFloat(totalCart).toFixed(2)
 
 priceCart.textContent = totalCart+"€"
+
+finalPriceDiv.value = totalCart

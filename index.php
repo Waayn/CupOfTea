@@ -1,18 +1,19 @@
 <?php 
 session_start();
 
-// récupere ma connexion a la bdd
-require 'controller/toolController.php';
-require 'controller/formController.php';
-require 'model/productModel.php';
-require 'model/categoryModel.php';
-require 'model/userModel.php';
+use App\Autoloader;
+use App\controller\{formController, toolController};
+use App\model\{productModel, categoryModel, userModel, orderModel};
+
+require_once 'Autoloader.php';
+Autoloader::register();
 
 // Instanciation de mes classes
 $tool       = new toolController();
 $productModel = new ProductModel();
 $categoryModel = new CategoryModel();
 $userModel = new UserModel();
+$orderModel = new OrderModel();
 $form       = new formController($userModel);
 
 if(array_key_exists('page',$_GET)):
@@ -53,6 +54,9 @@ if(array_key_exists('page',$_GET)):
 		break;
 		case 'cart':
 			$path = 'view/cartView.php';
+		break;
+		case 'order':
+			$path = 'view/orderView.php';
 		break;
     }
 

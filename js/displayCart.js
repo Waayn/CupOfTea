@@ -27,17 +27,26 @@ function deleteCart(){
 }
 
 let key = Object.keys(sessionStorage);
-let div = document.getElementById('display-products')
+let divProducts = document.getElementById('display-products')
 let btnDeleteCart = document.getElementById('delete-cart')
+let divDelete = document.getElementById('div-delete')
+let divEmptyCart = document.getElementById('empty-cart')
+let divoder = document.getElementById('order-div')
+let orderBtn = document.getElementById('order-btn')
 
 if (key.length != 0){
 	for(let i=0; i < key.length; i++) {
 			calcul = JSON.parse(sessionStorage.getItem(key[i]))
-			div.innerHTML += '<ul class="ul-cart"><li>Nom du produit : ' + calcul.name + '</li>' +
+			divProducts.innerHTML += '<ul class="ul-cart"><li>Nom du produit : ' + calcul.name + '</li>' +
 								 '<li>Quantité : ' + calcul.quantity + '</li>' +
 								 '<li>Prix du produit : ' + calcul.price + '€</li></ul>' +
 								 '<button id="deleteProduct' + calcul.id + '" onclick="deleteProduct(' + calcul.id + ')">Supprimer un produit</button>';
 
 	}
+	divDelete.innerHTML = '<button id="delete-cart" onclick="deleteCart()">Supprimer le panier</button>'
+} else {
+	divEmptyCart.innerHTML = 'Votre panier est vide.'
+	orderBtn.style.display = 'none'
+
 }
 

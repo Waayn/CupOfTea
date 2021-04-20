@@ -1,12 +1,17 @@
 <?php
 // idw-03_player 
 
+namespace App\core;
+
+use \PDO;
+use \Exception;
+
 class Connect {
 
     public $host       = 'localhost';
     // ici le nom de ma base de donnée 
     public $dbName     = 'ronanbea_tea';
-    // ici ce qui se trouve dans home-wecode mes identifiant 
+    // ici ce qui se trouvent mes identifiant 
     public $user       = 'root';
     public $password   = '';
     

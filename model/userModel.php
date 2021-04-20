@@ -1,6 +1,9 @@
 <?php
 
-require_once 'core/connect.php';
+namespace App\model;
+
+use App\core\connect as Connect;
+use \PDO;
 
 class UserModel extends Connect{
     
